@@ -1,0 +1,22 @@
+
+# Set here configurations for the database connection
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/tenant_db?createDatabaseIfNotExist=true
+
+
+  # Show or not log for each sql query
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+  application:
+    name: Tenant Management System
+
+server:
+  port: 8888
+
