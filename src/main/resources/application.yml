@@ -12,10 +12,16 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
+    defer-datasource-initialization: true
 
   application:
     name: Tenant Management System
+
+    # load default data into table
+  sql:
+    init:
+      mode: always
 
 server:
   port: 8888
